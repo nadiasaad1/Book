@@ -12,7 +12,7 @@ app.use(cors({
     port,
     "http://localhost:3000",
     "http://localhost:5173",
-    "https://book-0a6w.onrender.com"
+    "https://book-backened.onrender.com"
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
