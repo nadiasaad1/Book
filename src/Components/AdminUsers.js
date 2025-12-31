@@ -9,7 +9,7 @@ export default function AdminUsers() {
   }, []);
 
   const loadUsers = async () => {
-    const res = await axios.get("http://localhost:5000/api/admin/users");
+    const res = await axios.get("https://book-backened.onrender.com/api/admin/users");
     setUsers(res.data);
 
   };
