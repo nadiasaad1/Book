@@ -5,6 +5,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const port=process.env.PORT ||  5000;
 const app = express();
+const cors = require("cors");
 app.use(express.json());
 const allowedOrigins = [
   "http://localhost:3000",
