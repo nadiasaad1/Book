@@ -12,7 +12,7 @@ export default function UserStore() {
   }, [user.id]);
 
   const buyBook = async bookId => {
-    await axios.post("http://localhost:5000/api/user/buy", { userId: user.id, bookId });
+    await axios.post("https://book-backened.onrender.com/api/user/buy", { userId: user.id, bookId });
     setPurchased([...purchased, books.find(b => b.id === bookId)]);
   };
 
