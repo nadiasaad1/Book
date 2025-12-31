@@ -13,9 +13,9 @@ export default function AdminDashboard() {
   const loadData = async () => {
     try {
       const [usersRes, booksRes, purchasesRes] = await Promise.all([
-        axios.get("http://localhost:5000/api/admin/users"),
-        axios.get("http://localhost:5000/api/books"),
-        axios.get("http://localhost:5000/api/admin/purchases"),
+        axios.get("https://book-backened.onrender.com/api/admin/users"),
+        axios.get("https://book-backened.onrender.com/api/books"),
+        axios.get("https://book-backened.onrender.com/api/admin/purchases"),
       ]);
 
       setUsers(usersRes.data);
