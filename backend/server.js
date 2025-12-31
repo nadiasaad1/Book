@@ -22,11 +22,11 @@ app.use(express.json());
 // MySQL connection
 
 const db = mysql.createConnection({
-  host: "metro.proxy.rlwy.net",
+  host: "ballast.proxy.rlwy.net",
   user: "root",
-  password: "JagwsaXKyCTZJkUBTYRUxkSNrQyelZTv",
+  password: "cOjhOisSEfVCLiBRlOvokWYDqmtvxyfL",
   database: "railway",
-  port: 17969,
+  port: 15677,
   ssl: { rejectUnauthorized: false } // IMPORTANT for Railway
 });
 
