@@ -226,7 +226,7 @@ app.put("/api/admin/books/:id", (req, res) => {
 
 
 // ================= ADMIN: DELETE BOOK =================
-app.delete("/api/admin/books/:id", (req, res) => {
+app.delete("/api/admin/dbooks/:id", (req, res) => {
   db.query(
     "DELETE FROM books WHERE id=?",
     [req.params.id],
