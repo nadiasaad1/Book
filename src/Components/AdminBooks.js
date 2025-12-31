@@ -18,7 +18,7 @@ export default function AdminBooks() {
   }, []);
 
   const loadBooks = async () => {
-    const res = await axios.get("https://book-backend-ihhw.onrender.com/api/books");
+    const res = await axios.get("https://book-backened.onrender.com/api/books");
     setBooks(res.data);
   };
 
