@@ -15,7 +15,7 @@ function Contact() {
     setMsg("");
 
     try {
-      const res = await axios.post("http://localhost:5000/api/contact", formData);
+      const res = await axios.post("https://book-backened.onrender.com/api/contact", formData);
       setMsg(res.data.message);
       setFormData({ name: "", email: "", message: "" });
     } catch (err) {
