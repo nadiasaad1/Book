@@ -6,7 +6,7 @@ export default function UserPurchased() {
   const [purchased, setPurchased] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/user/purchases/${user.id}`).then(res => setPurchased(res.data));
+    axios.get(`https://book-backened.onrender.com/api/user/purchases/${user.id}`).then(res => setPurchased(res.data));
   }, [user.id]);
 
   return (
