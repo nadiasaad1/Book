@@ -7,8 +7,8 @@ export default function UserStore() {
   const [purchased, setPurchased] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/books").then(res => setBooks(res.data));
-    axios.get(`http://localhost:5000/api/user/purchases/${user.id}`).then(res => setPurchased(res.data));
+    axios.get("https://book-backened.onrender.com/api/books").then(res => setBooks(res.data));
+    axios.get(`https://book-backened.onrender.com/api/user/purchases/${user.id}`).then(res => setPurchased(res.data));
   }, [user.id]);
 
   const buyBook = async bookId => {
