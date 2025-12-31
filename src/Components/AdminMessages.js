@@ -10,7 +10,7 @@ export default function AdminMessages() {
 
   const loadMessages = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/admin/messages");
+      const res = await axios.get("https://book-backened.onrender.com/api/admin/messages");
       setMessages(res.data);
     } catch (err) {
       console.error(err);
