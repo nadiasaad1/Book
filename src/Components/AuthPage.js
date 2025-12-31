@@ -24,8 +24,8 @@ export default function AuthPage() {
 
     try {
       const url = isLogin
-        ? "{url}/api/login"
-        : "{url}/api/signup";
+        ? "https://book-backened.onrender.com/api/login"
+        : "https://book-backened.onrender.com/api/signup";
 
       const res = await axios.post(url, form);
       setMessage(res.data.message);
