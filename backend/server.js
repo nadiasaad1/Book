@@ -1,12 +1,15 @@
-const express = require("express");
+
 const mysql = require("mysql2");
 
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const port=process.env.PORT ||  5000;
+const port=  5000;
+
+const express = require("express");
 const app = express();
 const cors = require("cors");
-app.use(express.json());
+
+
 const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:5173",
@@ -15,18 +18,25 @@ const allowedOrigins = [
 
 app.use(cors({
   origin: function (origin, callback) {
-    // allow requests with no origin (Postman, server-to-server)
-    if (!origin) return callback(null, true);
+    if (!origin) return callback(null, true); // allow Postman / server calls
 
     if (allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
+      return callback(null, true);
     }
+
+    return callback(null, false); // IMPORTANT: no error thrown
   },
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 }));
+
+// ✅ MUST exist for preflight
+// app.options(cors());
+
+app.use(express.json());
+
+
 
 
 // MySQL connection
