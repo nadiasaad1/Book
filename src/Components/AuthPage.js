@@ -11,6 +11,7 @@ export default function AuthPage() {
     name: "",
     email: "",
     password: "",
+    role:"admin",
   });
   const [message, setMessage] = useState("");
 
