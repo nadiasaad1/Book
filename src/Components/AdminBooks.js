@@ -47,7 +47,7 @@ export default function AdminBooks() {
 
   const deleteBook = async id => {
     if (!window.confirm("Delete this book?")) return;
-    await axios.delete(`https://book-backened.onrender.com/api/admin/books/${id}`);
+    await axios.delete(`https://book-backened.onrender.com/api/admin/dbooks/${id}`);
     loadBooks();
   };
 
